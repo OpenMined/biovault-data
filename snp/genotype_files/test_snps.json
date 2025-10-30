@@ -1,0 +1,88 @@
+{
+  "herc2": {
+    "description": "Eye color variant",
+    "variants": [
+      {
+        "rsid": "rs12913832",
+        "chromosome": "15",
+        "position": 28120472,
+        "genotypes": ["AA", "AG", "GG"],
+        "phenotype": {
+          "AA": "Brown eyes",
+          "AG": "Brown eyes",
+          "GG": "Blue eyes"
+        }
+      }
+    ]
+  },
+  "apol1": {
+    "description": "APOL1 kidney disease risk variants",
+    "variants": [
+      {
+        "rsid": "rs73885319",
+        "chromosome": "22",
+        "position": 36265860,
+        "genotypes": ["AA", "AG", "GG"]
+      },
+      {
+        "rsid": "rs60910145",
+        "chromosome": "22",
+        "position": 36265988,
+        "genotypes": ["TT", "TC", "CC"]
+      },
+      {
+        "rsid": "rs71785313",
+        "chromosome": "22",
+        "position": 36266000,
+        "genotypes": ["II", "ID", "DD"]
+      }
+    ]
+  },
+  "brca": {
+    "description": "BRCA1/BRCA2 cancer risk variants",
+    "variants": [
+      {
+        "rsid": "rs80357336",
+        "chromosome": "17",
+        "position": 43045711,
+        "gene": "BRCA1",
+        "genotypes": ["GG", "GC", "CC"]
+      },
+      {
+        "rsid": "rs886040303",
+        "chromosome": "17",
+        "position": 43045728,
+        "gene": "BRCA1",
+        "genotypes": ["GG", "GA", "AA"]
+      },
+      {
+        "rsid": "rs397509295",
+        "chromosome": "17",
+        "position": 43045729,
+        "gene": "BRCA1",
+        "genotypes": ["GG", "GT", "TT"]
+      },
+      {
+        "rsid": "rs80358650",
+        "chromosome": "13",
+        "position": 32316463,
+        "gene": "BRCA2",
+        "genotypes": ["GG", "GA", "AA"]
+      },
+      {
+        "rsid": "rs397507571",
+        "chromosome": "13",
+        "position": 32316470,
+        "gene": "BRCA2",
+        "genotypes": ["GG", "GA", "AA"]
+      },
+      {
+        "rsid": "rs80358622",
+        "chromosome": "13",
+        "position": 32316497,
+        "gene": "BRCA2",
+        "genotypes": ["GG", "GA", "AA"]
+      }
+    ]
+  }
+}
