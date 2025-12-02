@@ -1,0 +1,24 @@
+version: 1
+generated_at: "2025-12-02T04:13:10Z"
+shard_size: "95m"
+compression: zstd
+file:
+  original: sc_RNAseq_adata_downsampled_to5percent.private.h5ad
+  original_size_bytes: 461184953
+  original_b3sum: 762cc74104ed3d88cc8217313e32d36cc4e968d0259b8d0a7bfd70d4bbb493d0
+  compressed: sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst
+  compressed_size_bytes: 157467028
+  compressed_b3sum: 3679c15329986ac46ed60786906df7148c5320adbe6e3c7f74c3daa35ecc8b26
+  shards:
+    - name: sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst.part.000
+      size_bytes: 99614720
+      b3sum: 3ba3ddb0f24adcdb892f79c3724c5517de2231360e00e683dbafeb2545e33a78
+    - name: sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst.part.001
+      size_bytes: 57852308
+      b3sum: 2ce33ad94e598cf5cf9a2ca8750e94dbc919b7fd372edeb3d66f14aec4a79b3e
+instructions:
+  reassemble: cat sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst.part.0* > sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst
+  decompress: zstd -d sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst
+  verify_shards: b3sum sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst.part.0*
+  verify_compressed: b3sum sc_RNAseq_adata_downsampled_to5percent.private.h5ad.zst
+  verify_final: b3sum sc_RNAseq_adata_downsampled_to5percent.private.h5ad

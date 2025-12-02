@@ -1,0 +1,27 @@
+version: 1
+generated_at: "2025-12-02T04:13:10Z"
+shard_size: "95m"
+compression: zstd
+file:
+  original: sc_RNAseq_adata_downsampled_to5percent.mock.h5ad
+  original_size_bytes: 989931899
+  original_b3sum: 7ab29de3250981739d2d30942527f66fe7fba54a16597545303595678f64afc2
+  compressed: sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst
+  compressed_size_bytes: 227488482
+  compressed_b3sum: 535407b2103050d607c7a442b73b6371975e1c47793935075c631736f5cb58a6
+  shards:
+    - name: sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst.part.000
+      size_bytes: 99614720
+      b3sum: 6b8377c5c1b026b2017e745e63c4e33c1c7de3bc6ac32e27ca300d36240dae0f
+    - name: sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst.part.001
+      size_bytes: 99614720
+      b3sum: 5cd82ef7d575e0a9353595793dc76a04d9833d13b65693a2c5a8b2ffb3d3866b
+    - name: sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst.part.002
+      size_bytes: 28259042
+      b3sum: 597228d526ac2ddf4b077ddf17af4bf2ef01bd5e66902bf660801f75cff41580
+instructions:
+  reassemble: cat sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst.part.0* > sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst
+  decompress: zstd -d sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst
+  verify_shards: b3sum sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst.part.0*
+  verify_compressed: b3sum sc_RNAseq_adata_downsampled_to5percent.mock.h5ad.zst
+  verify_final: b3sum sc_RNAseq_adata_downsampled_to5percent.mock.h5ad
