@@ -1,0 +1,15 @@
+version: 1
+generated_at: "2025-12-22T16:30:00Z"
+source_url: https://www.kaggle.com/datasets/sadmansakib7/ecg-arrhythmia-classification-dataset
+compression: zstd
+file:
+  original: "MIT-BIH Arrhythmia Database.csv"
+  original_size_bytes: 45482621
+  original_b3sum: d2434c330e485d1ceca80b4d7451f6398b15ea7313e61105bb64d77ffc806ae3
+  compressed: "MIT-BIH Arrhythmia Database.csv.zst"
+  compressed_size_bytes: 15576743
+  compressed_b3sum: 073daeaef43561b9ef27d8245ef7871c18cdae0ca9b9a8b229b3f975c680fa37
+instructions:
+  decompress: zstd -d "MIT-BIH Arrhythmia Database.csv.zst"
+  verify_compressed: b3sum "MIT-BIH Arrhythmia Database.csv.zst"
+  verify_final: b3sum "MIT-BIH Arrhythmia Database.csv"
