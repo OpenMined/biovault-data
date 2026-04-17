@@ -1,0 +1,28 @@
+version: 1
+generated_at: "2026-04-17T00:00:00Z"
+shard_size: "95m"
+archive_format: tar.gz
+file:
+  original: NA06985.clean.vcf.gz
+  original_size_bytes: 151559916
+  original_b3sum: f3ac07720e52c5e9984d35cbbc11ff6eed496c3d356f2794d5eb561398c30320
+  index: NA06985.clean.vcf.gz.tbi
+  index_size_bytes: 1600475
+  index_b3sum: b5c398ec32072d2a6b0bde889bb9882289fbe8a27dfe0b52413e1ae6fbeeed7b
+archive:
+  name: NA06985.clean.vcf.gz.tar.gz
+  contents:
+    - NA06985.clean.vcf.gz
+  shards:
+    - name: NA06985.clean.vcf.gz.tar.gz.aa
+      size_bytes: 99614720
+      b3sum: 2a1501de97e1d5d120740deb3e28dba459215b166b5deb5e9de31f34d2f67bed
+    - name: NA06985.clean.vcf.gz.tar.gz.ab
+      size_bytes: 51987609
+      b3sum: 5e79d89078b0ffd3d1d8fbc7e97cd25d8c6d904265a4cf23dc11222a0719670f
+instructions:
+  reassemble: cat NA06985.clean.vcf.gz.tar.gz.a* > NA06985.clean.vcf.gz.tar.gz
+  extract: tar xzf NA06985.clean.vcf.gz.tar.gz
+  verify_shards: b3sum NA06985.clean.vcf.gz.tar.gz.a*
+  verify_original: b3sum NA06985.clean.vcf.gz
+  verify_index: b3sum NA06985.clean.vcf.gz.tbi
